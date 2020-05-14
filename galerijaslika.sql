@@ -1,14 +1,14 @@
-# c:\xampp\mysql\bin\mysql -uedunova -pedunova < d:\jp22\galerijaslika.sql
+# c:\xampp\mysql\bin\mysql -uedunova -pedunova < d:\jp22\hello\galerijaslika.sql
 drop database if exists galerija;
 create database galerija;
 use galerija;
 
 create table galerija(
-    sifra int not null primary key auto_increment;
+    sifra int not null primary key auto_increment,
     naziv varchar(50),
     mjesto varchar(50),
     slika int,
-    autor varchar(50)
+    autor int
 
 );
 
@@ -19,7 +19,7 @@ create table slika(
     tema varchar(50)
 );
 
-creata table autor(
+create table autor(
     sifra int not null primary key auto_increment,
     ime varchar(50),
     prezime varchar(50),
