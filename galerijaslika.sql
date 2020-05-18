@@ -5,7 +5,7 @@ use galerija;
 
 create table galerija(
     sifra int not null primary key auto_increment,
-    naziv varchar(50),
+    naziv varchar(50) not null,
     mjesto varchar(50),
     slika int,
     autor int
@@ -16,13 +16,13 @@ create table slika(
     sifra int not null primary key auto_increment,
     opis text,
     autor int,
-    tema varchar(50)
+    tema varchar(50) not null
 );
 
 create table autor(
     sifra int not null primary key auto_increment,
-    ime varchar(50),
-    prezime varchar(50),
+    ime varchar(50) not null,
+    prezime varchar(50) not null,
     slika int
 );
 
