@@ -17,7 +17,7 @@ create table servis(
     sifra int not null primary key auto_increment,
     datum_servisa datetime,
     cijena decimal(10,2),
-    broje_servisa_auta int,
+    broj_servisa_auta int,
     vozilo int,
     korisnik int
 
@@ -28,7 +28,8 @@ create table korisnik(
     OIB int,
     ime varchar(20),
     prezime varchar(20),
-    adresa varchar(30)
+    adresa varchar(30),
+    mobitel int
 );
 
 
