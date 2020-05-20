@@ -25,7 +25,6 @@ create table polaznik(
     polozeni_propisi boolean not null,
     polozena_prva_pomoc boolean not null,
     broj_odvozenih_sati int not null,
-    autoskola int,
     instruktor int,
     vozilo int
 );
@@ -51,7 +50,6 @@ create table vozilo(
 alter table instruktor add foreign key (autoskola) references autoskola(sifra);
 alter table instruktor add foreign key (osoba) references osoba(sifra);
 alter table polaznik add foreign key (instruktor) references instruktor(sifra);
-alter table polaznik add foreign key (autoskola) references autoskola(sifra);
 alter table polaznik add foreign key (osoba) references osoba(sifra);
 alter table vozilo add foreign key (autoskola) references autoskola(sifra);
 alter table instruktor add foreign key (vozilo) references vozilo(sifra);
