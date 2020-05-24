@@ -1,4 +1,4 @@
-# c:\xampp\mysql\bin\mysql -uedunova -pedunova < d:\jp22\zavrsni_java\autoskola.sql
+# c:\xampp\mysql\bin\mysql -uedunova -pedunova < d:\jp22\hello\autoskola.sql
 drop database if exists lista_polaznika;
 create database lista_polaznika;
 use lista_polaznika;
