@@ -15,8 +15,7 @@ create table instruktor(
     sifra int not null primary key auto_increment,
     ugovor varchar(50),
     autoskola int,
-    osoba int,
-    vozilo int
+    osoba int
 );
 
 
@@ -52,6 +51,5 @@ alter table instruktor add foreign key (osoba) references osoba(sifra);
 alter table polaznik add foreign key (instruktor) references instruktor(sifra);
 alter table polaznik add foreign key (osoba) references osoba(sifra);
 alter table vozilo add foreign key (autoskola) references autoskola(sifra);
-alter table instruktor add foreign key (vozilo) references vozilo(sifra);
 alter table polaznik add foreign key (vozilo) references vozilo(sifra);
 
