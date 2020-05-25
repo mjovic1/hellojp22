@@ -14,18 +14,18 @@ create table autoskola(
 create table instruktor(
     sifra int not null primary key auto_increment,
     ugovor varchar(50),
-    autoskola int,
-    osoba int
+    autoskola int not null,
+    osoba int not null
 );
 
 
 create table polaznik(
-    osoba int,
+    osoba int not null,
     polozeni_propisi boolean not null,
     polozena_prva_pomoc boolean not null,
     broj_odvozenih_sati int not null,
-    instruktor int,
-    vozilo int
+    instruktor int not null,
+    vozilo int not null
 );
 
 create table osoba(
@@ -42,7 +42,7 @@ create table vozilo(
     marka varchar(30),
     boja varchar(20),
     godina_proizvodnje int,
-    autoskola int
+    autoskola int not null
 );
 
 
