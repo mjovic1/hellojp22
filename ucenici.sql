@@ -6,24 +6,24 @@ use lista_ucenika;
 create table skola(
     sifra int not null primary key auto_increment,
     naziv varchar(50) not null,
-    adresa varchar(50),
-    mjesto varchar(30)
+    adresa varchar(50) not null,
+    mjesto varchar(30) not null
 );
 
 create table ucenik(
-    osoba int,
-    razred varchar(10),
-    razrednik int,
+    osoba int not null,
+    razred varchar(10) not null,
+    razrednik int not null,
     prosjek_ocjena decimal(3,2),
-    skola int
+    skola int not null
 );
 
 create table razrednik(
     sifra int not null primary key auto_increment,
-    osoba int,
+    osoba int not null,
     ugovor varchar(50) not null,
-    predmet varchar(50),
-    skola int
+    predmet varchar(50) not null,
+    skola int not null
 );
 
 
